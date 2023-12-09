@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='utf-8'>
+    <style>
+        {% block style_css %}{% endblock %}
+    </style>
+</head>
+<body>
+<header>
+    {% block header %}{% endblock %}
+    <nav>
+        <dl>
+            <!-- Añadir aquí los enlaces a las páginas de la aplicación -->
+            <dd><a href='{% url "home" %}'>Inicio</a></dd>
+            <dd><a href='{% url "load_data" %}'>Cargar. AVISO: Se borrarán todos los datos</a></dd>
+        </dl>
+    </nav>
+</header>
+<section>
+    {% block content %}{% endblock %}
+</section>
+{% block footer %}{% endblock %}
+</body>
+</html>
